@@ -76,7 +76,7 @@ function addChar(char) {
         console.log("here again", text, text.value);
         text.value += char;
     } else if (char == "space") {
-        text.value += char;
+        text.value += " ";
     } else if (char == "backspace") {
         text.value = text.value.slice(0, -1);
     }

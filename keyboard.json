@@ -3,79 +3,94 @@
         {
             "name": "`",
             "shift": "~",
-            "size": 1
+            "size": 1,
+            "code": "backquote"
         },
         {
             "name": "1",
             "shift": "!",
-            "size": 1
+            "size": 1,
+            "code": "digit1"
         },
         {
             "name": "2",
             "shift": "@",
-            "size": 1
+            "size": 1,
+            "code": "digit2"
         },
         {
             "name": "3",
             "shift": "#",
-            "size": 1
+            "size": 1,
+            "code": "digit3"
         },
         {
             "name": "4",
             "shift": "$",
-            "size": 1
+            "size": 1,
+            "code": "digit4"
         },
         {
             "name": "5",
             "shift": "%",
-            "size": 1
+            "size": 1,
+            "code": "digit5"
         },
         {
             "name": "6",
             "shift": "^",
-            "size": 1
+            "size": 1,
+            "code": "digit6"
         },
         {
             "name": "7",
             "shift": "&",
-            "size": 1
+            "size": 1,
+            "code": "digit7"
         },
         {
             "name": "8",
             "shift": "*",
-            "size": 1
+            "size": 1,
+            "code": "digit8"
         },
         {
             "name": "9",
             "shift": "(",
-            "size": 1
+            "size": 1,
+            "code": "digit9"
         },
         {
             "name": "0",
             "shift": ")",
-            "size": 1
+            "size": 1,
+            "code": "digit0"
         },
         {
             "name": "-",
             "shift": "_",
-            "size": 1
+            "size": 1,
+            "code": "minus"
         },
         {
             "name": "=",
             "shift": "+",
-            "size": 1
+            "size": 1,
+            "code": "equal"
         },
         {
             "name": "backspace",
             "shift": "no",
-            "size": 3.25
+            "size": 3.25,
+            "code": "backspace"
         }
     ],
     [
         {
             "name": "tab",
             "shift": "no",
-            "size": 1.5
+            "size": 1.5,
+            "code": "tab"
         },
         {
             "name": "q",
@@ -130,29 +145,34 @@
         {
             "name": "[",
             "shift": "{",
-            "size": 1
+            "size": 1,
+            "code": "bracketleft"
         },
         {
             "name": "]",
             "shift": "}",
-            "size": 1
+            "size": 1,
+            "code": "bracketright"
         },
         {
             "name": "&#92;",
             "shift": "|",
-            "size": 1
+            "size": 1,
+            "code": "backslash"
         },
         {
             "name": "del",
             "shift": "no",
-            "size": 1.5
+            "size": 1.5,
+            "code": "delete"
         }
     ],
     [
         {
             "name": "capslock",
             "shift": "no",
-            "size": 2
+            "size": 2,
+            "code": "capslock"
         },
         {
             "name": "a",
@@ -202,24 +222,28 @@
         {
             "name": ";",
             "shift": ":",
-            "size": 1
+            "size": 1,
+            "code": "semicolon"
         },
         {
             "name": "'",
             "shift": "&#34;",
-            "size": 1
+            "size": 1, 
+            "code": "quote"
         },
         {
             "name": "enter",
             "shift": "no",
-            "size": 3.5
+            "size": 3.5,
+            "code": "enter"
         }
     ],
     [
         {
             "name": "shift",
             "shift": "no",
-            "size": 2.75
+            "size": 2.75,
+            "code": "shiftleft"
         },
         {
             "name": "z",
@@ -259,75 +283,89 @@
         {
             "name": ",",
             "shift": "<",
-            "size": 1
+            "size": 1,
+            "code": "comma"
         },
         {
             "name": ".",
             "shift": ">",
-            "size": 1
+            "size": 1,
+            "code": "period"
         },
         {
             "name": "/",
             "shift": "?",
-            "size": 1
+            "size": 1,
+            "code": "slash"
         },
         {
             "name": "&uarr;",
             "shift": "no",
-            "size": 1
+            "size": 1,
+            "code": "arrowup"
         },
         {
             "name": "shift",
             "shift": "no",
-            "size": 2.75
+            "size": 2.75,
+            "code": "shiftright"
         }
     ],
     [
         {
             "name": "ctrl",
             "shift": "no",
-            "size": 1.5
+            "size": 1.5,
+            "code": "controlleft"
         },
         {
             "name": "win",
             "shift": "no",
-            "size": 1.5
+            "size": 1.5,
+            "code":"metaleft"
         },
         {
             "name": "alt",
             "shift": "no",
-            "size": 1.5
+            "size": 1.5,
+            "code":"altleft"
         },
         {
             "name": "space",
             "shift": "no",
-            "size": 7
+            "size": 7,
+            "code":"space"
         },
         {
             "name": "alt",
             "shift": "no",
-            "size": 1.5
+            "size": 1.5,
+            "code": "altright"
         },
 
         {
             "name": "&larr;",
             "shift": "no",
-            "size": 1
+            "size": 1,
+            "code":"arrowleft"
         },
         {
             "name": "&darr;",
             "shift": "no",
-            "size": 1
+            "size": 1,
+            "code":"arrowdown"
         },
         {
             "name": "&rarr;",
             "shift": "no",
-            "size": 1
+            "size": 1,
+            "code":"arrowright"
         },
         {
             "name": "ctrl",
             "shift": "no",
-            "size": 1.5
+            "size": 1.5,
+            "code":"controlright"
         }
     ]
 ]

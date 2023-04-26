@@ -36,6 +36,7 @@ for (let i = 0; i < 5; i++) {
         btn.style.width = `${40 * key.size}px`;
         if (key.shift == "no") {
             noChangeBtns.push(key.name);
+            noChangeBtns.push(key.code);
         }
         if (key.name == "shift") {
             btn.addEventListener("dblclick", function (e) {
@@ -62,7 +63,6 @@ text.focus();
 let btns = document.querySelectorAll("button");
 
 text.addEventListener("keydown", function (e) {
-    console.log(e.key);
     let btnPressed;
     if (e.key.toLowerCase().match(/[a-z]/i) && e.key.length == 1) {
         btnPressed = document.querySelector(`#${e.key.toLowerCase()}`);
@@ -94,14 +94,19 @@ text.addEventListener("keyup", function (e) {
 
 function addChar(char) {
     if (!noChangeBtns.includes(char)) {
-        console.log("here again", text, text.value);
-        text.value += char;
+        if (!isShiftPressed) {
+            text.value += char;
+        } else {
+            text.value += findInKeys(char).shift;
+        }
+
     } else if (char == "space") {
         text.value += " ";
     } else if (char == "backspace") {
         text.value = text.value.slice(0, -1);
     } else if (char == "shift") {
         // handleShift();
+        // TODO: Handle short shift click
     }
     text.focus();
     text.selectionStart = text.value.length;
@@ -113,6 +118,9 @@ function handleShift() {
         btns.forEach((b) => {
             if (b.id.toLowerCase().match(/[a-z]/i) && b.id.length == 1) {
                 b.style.textTransform = "uppercase";
+            } else if (!noChangeBtns.includes(b.id.toLowerCase())) {
+                let key = findInKeys(b.id);
+                b.innerHTML = key.shift;
             }
         });
         isShiftPressed = true;
@@ -120,8 +128,26 @@ function handleShift() {
         btns.forEach((b) => {
             if (b.id.toLowerCase().match(/[a-z]/i) && b.id.length == 1) {
                 b.style.textTransform = "none";
+            } else if (!noChangeBtns.includes(b.id.toLowerCase())) {
+                let key = findInKeys(b.id);
+                b.innerHTML = key.name;
             }
         });
         isShiftPressed = false;
     }
+}
+
+function findInKeys(smth) {
+    let key;
+    for (let i = 0; i < keys.length; i++) {
+        let key = keys[i].find((item) => item.code == smth);
+        if (key != undefined) {
+            return key;
+        }
+        key = keys[i].find((item) => item.name == smth);
+        if (key != undefined) {
+            return key;
+        }
+    };
+
 }

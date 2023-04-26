@@ -12,9 +12,10 @@ let text = document.createElement("textarea");
 let keyboardContainer = document.createElement("table");
 
 let notes = document.createElement("p");
-notes.innerHTML = 'Created in Windows. Press "alt" + "shift" to change the language';
+notes.innerHTML = 'Created in Windows. Press "alt" + "shift" to change the language. Double click to pinch "shift"';
 
 let noChangeBtns = [];
+let isShiftPressed = false;
 
 body.append(header);
 body.append(text);
@@ -36,9 +37,20 @@ for (let i = 0; i < 5; i++) {
         if (key.shift == "no") {
             noChangeBtns.push(key.name);
         }
+        if (key.name == "shift") {
+            btn.addEventListener("dblclick", function (e) {
+                handleShift();
+                console.log(e.srcElement.id);
+                let btnPressed = document.querySelector(`#${e.srcElement.id.toLowerCase()}`);
+                if (isShiftPressed) {
+                    btnPressed.style.backgroundColor = btnColor;
+                } else {
+                    btnPressed.style.removeProperty("background-color");
+                }
+            });
+        }
         let char = btn.innerHTML;
         btn.addEventListener("click", function () {
-            console.log("here", char);
             addChar(char);
         });
     });
@@ -46,6 +58,8 @@ for (let i = 0; i < 5; i++) {
 
 body.append(notes);
 text.focus();
+
+let btns = document.querySelectorAll("button");
 
 text.addEventListener("keydown", function (e) {
     console.log(e.key);
@@ -55,17 +69,24 @@ text.addEventListener("keydown", function (e) {
     } else {
         btnPressed = document.querySelector(`#${e.code.toLowerCase()}`);
     }
+    if (btnPressed.innerHTML == "shift") {
+        if (!isShiftPressed) {
+            handleShift();
+        }
+    }
 
     btnPressed.style.backgroundColor = btnColor;
 });
 
 text.addEventListener("keyup", function (e) {
-    console.log(e.key);
     let btnPressed;
     if (e.key.toLowerCase().match(/[a-z]/i) && e.key.length == 1) {
         btnPressed = document.querySelector(`#${e.key.toLowerCase()}`);
     } else {
         btnPressed = document.querySelector(`#${e.code.toLowerCase()}`);
+    }
+    if (btnPressed.innerHTML == "shift") {
+        handleShift();
     }
 
     btnPressed.style.removeProperty("background-color");
@@ -79,7 +100,28 @@ function addChar(char) {
         text.value += " ";
     } else if (char == "backspace") {
         text.value = text.value.slice(0, -1);
+    } else if (char == "shift") {
+        // handleShift();
     }
     text.focus();
     text.selectionStart = text.value.length;
+}
+
+function handleShift() {
+    console.log("handled");
+    if (!isShiftPressed) {
+        btns.forEach((b) => {
+            if (b.id.toLowerCase().match(/[a-z]/i) && b.id.length == 1) {
+                b.style.textTransform = "uppercase";
+            }
+        });
+        isShiftPressed = true;
+    } else {
+        btns.forEach((b) => {
+            if (b.id.toLowerCase().match(/[a-z]/i) && b.id.length == 1) {
+                b.style.textTransform = "none";
+            }
+        });
+        isShiftPressed = false;
+    }
 }

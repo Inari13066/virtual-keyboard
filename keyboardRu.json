@@ -17,21 +17,21 @@
         {
             "id": "2",
             "name": "2",
-            "shift": "@",
+            "shift": "&#34;",
             "size": 1,
             "code": "digit2"
         },
         {
             "id": "3",
             "name": "3",
-            "shift": "#",
+            "shift": "№",
             "size": 1,
             "code": "digit3"
         },
         {
             "id": "4",
             "name": "4",
-            "shift": "$",
+            "shift": ";",
             "size": 1,
             "code": "digit4"
         },
@@ -45,14 +45,14 @@
         {
             "id": "6",
             "name": "6",
-            "shift": "^",
+            "shift": ":",
             "size": 1,
             "code": "digit6"
         },
         {
             "id": "7",
             "name": "7",
-            "shift": "&",
+            "shift": "?",
             "size": 1,
             "code": "digit7"
         },
@@ -109,82 +109,82 @@
         },
         {
             "id": "q",
-            "name": "q",
-            "shift": "Q",
+            "name": "й",
+            "shift": "Й",
             "size": 1
         },
         {
             "id": "w",
-            "name": "w",
-            "shift": "W",
+            "name": "ц",
+            "shift": "Ц",
             "size": 1
         },
         {
             "id": "e",
-            "name": "e",
-            "shift": "E",
+            "name": "у",
+            "shift": "У",
             "size": 1
         },
         {
             "id": "r",
-            "name": "r",
-            "shift": "R",
+            "name": "к",
+            "shift": "К",
             "size": 1
         },
         {
             "id": "t",
-            "name": "t",
-            "shift": "T",
+            "name": "е",
+            "shift": "Е",
             "size": 1
         },
         {
             "id": "y",
-            "name": "y",
-            "shift": "Y",
+            "name": "н",
+            "shift": "Н",
             "size": 1
         },
         {
             "id": "u",
-            "name": "u",
-            "shift": "U",
+            "name": "г",
+            "shift": "Г",
             "size": 1
         },
         {
             "id": "i",
-            "name": "i",
-            "shift": "I",
+            "name": "ш",
+            "shift": "Ш",
             "size": 1
         },
         {
             "id": "o",
-            "name": "o",
-            "shift": "O",
+            "name": "щ",
+            "shift": "Щ",
             "size": 1
         },
         {
             "id": "p",
-            "name": "p",
-            "shift": "P",
+            "name": "з",
+            "shift": "З",
             "size": 1
         },
         {
             "id": "[",
-            "name": "[",
-            "shift": "{",
+            "name": "х",
+            "shift": "Х",
             "size": 1,
             "code": "bracketleft"
         },
         {
             "id": "]",
-            "name": "]",
-            "shift": "}",
+            "name": "ъ",
+            "shift": "Ъ",
             "size": 1,
             "code": "bracketright"
         },
         {
             "id": "&#92;",
             "name": "&#92;",
-            "shift": "|",
+            "shift": "/",
             "size": 1,
             "code": "backslash"
         },
@@ -206,69 +206,69 @@
         },
         {
             "id": "a",
-            "name": "a",
-            "shift": "A",
+            "name": "ф",
+            "shift": "Ф",
             "size": 1
         },
         {
             "id": "s",
-            "name": "s",
-            "shift": "S",
+            "name": "ы",
+            "shift": "Ы",
             "size": 1
         },
         {
             "id": "d",
-            "name": "d",
-            "shift": "D",
+            "name": "в",
+            "shift": "В",
             "size": 1
         },
         {
             "id": "f",
-            "name": "f",
-            "shift": "F",
+            "name": "а",
+            "shift": "А",
             "size": 1
         },
         {
             "id": "g",
-            "name": "g",
-            "shift": "G",
+            "name": "п",
+            "shift": "П",
             "size": 1
         },
         {
             "id": "h",
-            "name": "h",
-            "shift": "H",
+            "name": "р",
+            "shift": "Р",
             "size": 1
         },
         {
             "id": "j",
-            "name": "j",
-            "shift": "J",
+            "name": "о",
+            "shift": "О",
             "size": 1
         },
         {
             "id": "k",
-            "name": "k",
-            "shift": "K",
+            "name": "л",
+            "shift": "Л",
             "size": 1
         },
         {
             "id": "l",
-            "name": "l",
-            "shift": "L",
+            "name": "д",
+            "shift": "Д",
             "size": 1
         },
         {
             "id": ";",
-            "name": ";",
-            "shift": ":",
+            "name": "ж",
+            "shift": "Ж",
             "size": 1,
             "code": "semicolon"
         },
         {
             "id": "'",
-            "name": "'",
-            "shift": "&#34;",
+            "name": "э",
+            "shift": "Э",
             "size": 1, 
             "code": "quote"
         },
@@ -290,64 +290,64 @@
         },
         {
             "id": "z",
-            "name": "z",
-            "shift": "Z",
+            "name": "я",
+            "shift": "Я",
             "size": 1
         },
         {
             "id": "x",
-            "name": "x",
-            "shift": "X",
+            "name": "ч",
+            "shift": "Ч",
             "size": 1
         },
         {
             "id": "c",
-            "name": "c",
-            "shift": "C",
+            "name": "с",
+            "shift": "С",
             "size": 1
         },
         {
             "id": "v",
-            "name": "v",
-            "shift": "V",
+            "name": "м",
+            "shift": "М",
             "size": 1
         },
         {
             "id": "b",
-            "name": "b",
-            "shift": "B",
+            "name": "и",
+            "shift": "И",
             "size": 1
         },
         {
             "id": "n",
-            "name": "n",
-            "shift": "N",
+            "name": "т",
+            "shift": "Т",
             "size": 1
         },
         {
             "id": "m",
-            "name": "m",
-            "shift": "M",
+            "name": "ь",
+            "shift": "Ь",
             "size": 1
         },
         {
             "id": ",",
-            "name": ",",
-            "shift": "<",
+            "name": "б",
+            "shift": "Б",
             "size": 1,
             "code": "comma"
         },
         {
             "id": ".",
-            "name": ".",
-            "shift": ">",
+            "name": "ю",
+            "shift": "Ю",
             "size": 1,
             "code": "period"
         },
         {
             "id": "/",
-            "name": "/",
-            "shift": "?",
+            "name": ".",
+            "shift": ",",
             "size": 1,
             "code": "slash"
         },

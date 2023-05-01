@@ -236,6 +236,8 @@ function createKeys(lang) {
                         btnPressed.style.removeProperty("background-color");
                     }
                 });
+                btn.addEventListener("mousedown", handleShift);
+                btn.addEventListener("mouseup", handleShift)
             }
             if (key.id == "alt") {
                 btn.addEventListener("dblclick", function (e) {

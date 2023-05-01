@@ -41,14 +41,26 @@ text.addEventListener("keydown", function (e) {
     }
     if (btnPressed.innerHTML == "shift") {
         if (!isShiftPressed) {
-            handleShift();
+            if (isAltPressed) {
+                changeLang();
+            } else {
+                handleShift();
+            }
+        }
+    }
+    if (btnPressed.innerHTML == "alt") {
+        if (!isAltPressed) {
+            isAltPressed = true;
+            if (isShiftPressed) {
+                changeLang();
+            }
         }
     }
     // console.log(e.key)
     if (e.key == "Tab") {
         // console.log("Tab")
         e.preventDefault();
-        addChar("tab", "tab")
+        addChar("tab", "tab");
     }
 
     btnPressed.style.backgroundColor = btnColor;
@@ -62,10 +74,15 @@ text.addEventListener("keyup", function (e) {
         btnPressed = document.querySelector(`#${e.code.toLowerCase()}`);
     }
     if (btnPressed.innerHTML == "shift") {
+        isShiftPressed = true;
         handleShift();
+    }
+    if (btnPressed.innerHTML == "alt") {
+        isAltPressed = false;
     }
 
     btnPressed.style.removeProperty("background-color");
+    text.focus();
 });
 
 function addChar(char, id) {
@@ -107,13 +124,13 @@ function addChar(char, id) {
     } else if (id == "enter") {
         arr.splice(position, 0, "\n");
         position++;
-        console.log(arr)
+        // console.log(arr);
     } else if (id == "capslock") {
         handleCaps();
     } else if (char == "tab") {
         arr.splice(position, 0, "\t");
         position++;
-        console.log(arr)
+        // console.log(arr);
     } else if (char == "del") {
         arr.splice(position, 1);
     }
@@ -238,7 +255,7 @@ function createKeys(lang) {
                     }
                 });
                 btn.addEventListener("mousedown", handleShift);
-                btn.addEventListener("mouseup", handleShift)
+                btn.addEventListener("mouseup", handleShift);
             }
             if (key.id == "alt") {
                 btn.addEventListener("dblclick", function (e) {
@@ -266,3 +283,16 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
+function setLocalStorage() {
+    localStorage.setItem("lang", mainLang);
+}
+window.addEventListener("beforeunload", setLocalStorage);
+
+function getLocalStorage() {
+    if (localStorage.getItem("lang")) {
+        mainLang = localStorage.getItem("lang");
+    }
+    createKeys(mainLang);
+}
+window.addEventListener("load", getLocalStorage);

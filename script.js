@@ -2,7 +2,7 @@ import keysEn from "./keyboard.json" assert { type: "json" };
 import keysRu from "./keyboardRu.json" assert { type: "json" };
 
 let btnColor = "#538083";
-let mainLang = "en"
+let mainLang = "en";
 let keys = keysEn;
 
 const body = document.querySelector("body");
@@ -22,6 +22,7 @@ notes.innerHTML =
 let noChangeBtns = [];
 let isShiftPressed = false;
 let isAltPressed = false;
+let isCapsPressed = false;
 
 body.append(header);
 body.append(text);
@@ -67,11 +68,18 @@ function addChar(char, id) {
     let arr = text.value.split("");
     //TODO: add from virtual keyboard where the cursor is
     if (!noChangeBtns.includes(char)) {
-        if (!isShiftPressed) {
+        if (!isShiftPressed && !isCapsPressed) {
             arr.splice(position, 0, char);
             position++;
         } else {
-            arr.splice(position, 0, findInKeys(char).shift);
+            if (isCapsPressed && id.match(/[a-z]/i) && id.length == 1) {
+                arr.splice(position, 0, findInKeys(char).shift);
+            } else if (isCapsPressed) {
+                arr.splice(position, 0, char);
+            }
+            if (isShiftPressed) {
+                arr.splice(position, 0, findInKeys(char).shift);
+            }
             position++;
         }
     } else if (id == "space") {
@@ -93,6 +101,8 @@ function addChar(char, id) {
     } else if (id == "enter") {
         arr.splice(position, 0, "\n");
         position++;
+    } else if (id == "capslock") {
+        handleCaps();
     }
     text.value = arr.join("");
     text.setSelectionRange(position, position);
@@ -101,7 +111,6 @@ function addChar(char, id) {
 
 function handleShift() {
     let btns = document.querySelectorAll("button");
-    console.log("handled");
     if (!isShiftPressed) {
         btns.forEach((b) => {
             // console.log("handling", b);
@@ -126,6 +135,28 @@ function handleShift() {
     }
 }
 
+function handleCaps() {
+    let capsKey = document.querySelector("#capslock");
+    let btns = document.querySelectorAll("button");
+    if (!isCapsPressed) {
+        btns.forEach((b) => {
+            if (b.id.toLowerCase().match(/[a-z]/i) && b.id.length == 1) {
+                b.style.textTransform = "uppercase";
+            }
+        });
+        capsKey.style.backgroundColor = btnColor;
+        isCapsPressed = true;
+    } else {
+        btns.forEach((b) => {
+            if (b.id.toLowerCase().match(/[a-z]/i) && b.id.length == 1) {
+                b.style.textTransform = "none";
+            }
+        });
+        capsKey.style.removeProperty("background-color");
+        isCapsPressed = false;
+    }
+}
+
 function findInKeys(smth) {
     let key;
     for (let i = 0; i < keys.length; i++) {
@@ -144,10 +175,10 @@ function changeLang() {
     console.log("lang change");
     if (mainLang == "en") {
         mainLang = "ru";
-        createKeys("ru")
+        createKeys("ru");
     } else {
         mainLang = "en";
-        createKeys("en")
+        createKeys("en");
     }
 }
 
@@ -159,7 +190,7 @@ function createKeys(lang) {
     }
 
     if (keyboardContainer.firstChild) {
-        removeAllChildNodes(keyboardContainer)
+        removeAllChildNodes(keyboardContainer);
     }
 
     isAltPressed = false;
@@ -176,7 +207,7 @@ function createKeys(lang) {
             } else {
                 btn.id = `${key.code}`;
             }
-    
+
             keyboardContainer.rows[i].append(btn);
             btn.style.width = `${40 * key.size}px`;
             if (key.shift == "no") {

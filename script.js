@@ -64,6 +64,14 @@ text.addEventListener("keydown", function (e) {
     }
 
     btnPressed.style.backgroundColor = btnColor;
+    if (btnPressed.innerHTML == "capslock") {
+        handleCaps();
+        if (isCapsPressed) {
+            btnPressed.style.backgroundColor = btnColor;
+        } else {
+            btnPressed.style.removeProperty("background-color");
+        }
+    }
 });
 
 text.addEventListener("keyup", function (e) {
@@ -80,8 +88,15 @@ text.addEventListener("keyup", function (e) {
     if (btnPressed.innerHTML == "alt") {
         isAltPressed = false;
     }
-
     btnPressed.style.removeProperty("background-color");
+    if (btnPressed.innerHTML == "capslock") {
+        if (isCapsPressed) {
+            btnPressed.style.backgroundColor = btnColor;
+        } else {
+            btnPressed.style.removeProperty("background-color");
+        }
+    }
+
     text.focus();
 });
 

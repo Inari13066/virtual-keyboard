@@ -44,6 +44,12 @@ text.addEventListener("keydown", function (e) {
             handleShift();
         }
     }
+    // console.log(e.key)
+    if (e.key == "Tab") {
+        // console.log("Tab")
+        e.preventDefault();
+        addChar("tab", "tab")
+    }
 
     btnPressed.style.backgroundColor = btnColor;
 });
@@ -63,10 +69,10 @@ text.addEventListener("keyup", function (e) {
 });
 
 function addChar(char, id) {
-    console.log(text.selectionStart);
+    // console.log(text.selectionStart);
     let position = text.selectionStart;
     let arr = text.value.split("");
-    //TODO: add from virtual keyboard where the cursor is
+
     if (!noChangeBtns.includes(char)) {
         if (!isShiftPressed && !isCapsPressed) {
             arr.splice(position, 0, char);
@@ -101,8 +107,14 @@ function addChar(char, id) {
     } else if (id == "enter") {
         arr.splice(position, 0, "\n");
         position++;
+        console.log(arr)
     } else if (id == "capslock") {
         handleCaps();
+    } else if (char == "tab") {
+
+        arr.splice(position, 0, "\t");
+        position++;
+        console.log(arr)
     }
     text.value = arr.join("");
     text.setSelectionRange(position, position);

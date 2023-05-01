@@ -111,10 +111,11 @@ function addChar(char, id) {
     } else if (id == "capslock") {
         handleCaps();
     } else if (char == "tab") {
-
         arr.splice(position, 0, "\t");
         position++;
         console.log(arr)
+    } else if (char == "del") {
+        arr.splice(position, 1);
     }
     text.value = arr.join("");
     text.setSelectionRange(position, position);

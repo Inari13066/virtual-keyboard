@@ -1,0 +1,31 @@
+button {
+    height: 40px;
+    margin: 5px;
+}
+
+button:active {
+    background-color: #538083;
+}
+
+textarea {
+    margin: 5px;
+    width: 775px;
+    height: 70px;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 10px;
+}
+
+body {
+    text-align: center;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}

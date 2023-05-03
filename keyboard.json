@@ -1,0 +1,435 @@
+[
+    [
+        {
+            "id": "`",
+            "name": "`",
+            "shift": "~",
+            "size": 1,
+            "code": "backquote"
+        },
+        {
+            "id": "1",
+            "name": "1",
+            "shift": "!",
+            "size": 1,
+            "code": "digit1"
+        },
+        {
+            "id": "2",
+            "name": "2",
+            "shift": "@",
+            "size": 1,
+            "code": "digit2"
+        },
+        {
+            "id": "3",
+            "name": "3",
+            "shift": "#",
+            "size": 1,
+            "code": "digit3"
+        },
+        {
+            "id": "4",
+            "name": "4",
+            "shift": "$",
+            "size": 1,
+            "code": "digit4"
+        },
+        {
+            "id": "5",
+            "name": "5",
+            "shift": "%",
+            "size": 1,
+            "code": "digit5"
+        },
+        {
+            "id": "6",
+            "name": "6",
+            "shift": "^",
+            "size": 1,
+            "code": "digit6"
+        },
+        {
+            "id": "7",
+            "name": "7",
+            "shift": "&",
+            "size": 1,
+            "code": "digit7"
+        },
+        {
+            "id": "8",
+            "name": "8",
+            "shift": "*",
+            "size": 1,
+            "code": "digit8"
+        },
+        {
+            "id": "9",
+            "name": "9",
+            "shift": "(",
+            "size": 1,
+            "code": "digit9"
+        },
+        {
+            "id": "0",
+            "name": "0",
+            "shift": ")",
+            "size": 1,
+            "code": "digit0"
+        },
+        {
+            "id": "-",
+            "name": "-",
+            "shift": "_",
+            "size": 1,
+            "code": "minus"
+        },
+        {
+            "id": "=",
+            "name": "=",
+            "shift": "+",
+            "size": 1,
+            "code": "equal"
+        },
+        {
+            "id": "backspace",
+            "name": "backspace",
+            "shift": "no",
+            "size": 3.25,
+            "code": "backspace"
+        }
+    ],
+    [
+        {
+            "id": "tab",
+            "name": "tab",
+            "shift": "no",
+            "size": 1.5,
+            "code": "tab"
+        },
+        {
+            "id": "q",
+            "name": "q",
+            "shift": "Q",
+            "size": 1
+        },
+        {
+            "id": "w",
+            "name": "w",
+            "shift": "W",
+            "size": 1
+        },
+        {
+            "id": "e",
+            "name": "e",
+            "shift": "E",
+            "size": 1
+        },
+        {
+            "id": "r",
+            "name": "r",
+            "shift": "R",
+            "size": 1
+        },
+        {
+            "id": "t",
+            "name": "t",
+            "shift": "T",
+            "size": 1
+        },
+        {
+            "id": "y",
+            "name": "y",
+            "shift": "Y",
+            "size": 1
+        },
+        {
+            "id": "u",
+            "name": "u",
+            "shift": "U",
+            "size": 1
+        },
+        {
+            "id": "i",
+            "name": "i",
+            "shift": "I",
+            "size": 1
+        },
+        {
+            "id": "o",
+            "name": "o",
+            "shift": "O",
+            "size": 1
+        },
+        {
+            "id": "p",
+            "name": "p",
+            "shift": "P",
+            "size": 1
+        },
+        {
+            "id": "[",
+            "name": "[",
+            "shift": "{",
+            "size": 1,
+            "code": "bracketleft"
+        },
+        {
+            "id": "]",
+            "name": "]",
+            "shift": "}",
+            "size": 1,
+            "code": "bracketright"
+        },
+        {
+            "id": "&#92;",
+            "name": "&#92;",
+            "shift": "|",
+            "size": 1,
+            "code": "backslash"
+        },
+        {
+            "id": "del",
+            "name": "del",
+            "shift": "no",
+            "size": 1.5,
+            "code": "delete"
+        }
+    ],
+    [
+        {
+            "id": "capslock",
+            "name": "capslock",
+            "shift": "no",
+            "size": 2,
+            "code": "capslock"
+        },
+        {
+            "id": "a",
+            "name": "a",
+            "shift": "A",
+            "size": 1
+        },
+        {
+            "id": "s",
+            "name": "s",
+            "shift": "S",
+            "size": 1
+        },
+        {
+            "id": "d",
+            "name": "d",
+            "shift": "D",
+            "size": 1
+        },
+        {
+            "id": "f",
+            "name": "f",
+            "shift": "F",
+            "size": 1
+        },
+        {
+            "id": "g",
+            "name": "g",
+            "shift": "G",
+            "size": 1
+        },
+        {
+            "id": "h",
+            "name": "h",
+            "shift": "H",
+            "size": 1
+        },
+        {
+            "id": "j",
+            "name": "j",
+            "shift": "J",
+            "size": 1
+        },
+        {
+            "id": "k",
+            "name": "k",
+            "shift": "K",
+            "size": 1
+        },
+        {
+            "id": "l",
+            "name": "l",
+            "shift": "L",
+            "size": 1
+        },
+        {
+            "id": ";",
+            "name": ";",
+            "shift": ":",
+            "size": 1,
+            "code": "semicolon"
+        },
+        {
+            "id": "'",
+            "name": "'",
+            "shift": "&#34;",
+            "size": 1, 
+            "code": "quote"
+        },
+        {
+            "id": "enter",
+            "name": "enter",
+            "shift": "no",
+            "size": 3.5,
+            "code": "enter"
+        }
+    ],
+    [
+        {
+            "id": "shift",
+            "name": "shift",
+            "shift": "no",
+            "size": 2.75,
+            "code": "shiftleft"
+        },
+        {
+            "id": "z",
+            "name": "z",
+            "shift": "Z",
+            "size": 1
+        },
+        {
+            "id": "x",
+            "name": "x",
+            "shift": "X",
+            "size": 1
+        },
+        {
+            "id": "c",
+            "name": "c",
+            "shift": "C",
+            "size": 1
+        },
+        {
+            "id": "v",
+            "name": "v",
+            "shift": "V",
+            "size": 1
+        },
+        {
+            "id": "b",
+            "name": "b",
+            "shift": "B",
+            "size": 1
+        },
+        {
+            "id": "n",
+            "name": "n",
+            "shift": "N",
+            "size": 1
+        },
+        {
+            "id": "m",
+            "name": "m",
+            "shift": "M",
+            "size": 1
+        },
+        {
+            "id": ",",
+            "name": ",",
+            "shift": "<",
+            "size": 1,
+            "code": "comma"
+        },
+        {
+            "id": ".",
+            "name": ".",
+            "shift": ">",
+            "size": 1,
+            "code": "period"
+        },
+        {
+            "id": "/",
+            "name": "/",
+            "shift": "?",
+            "size": 1,
+            "code": "slash"
+        },
+        {
+            "id": "&uarr;",
+            "name": "&uarr;",
+            "shift": "no",
+            "size": 1,
+            "code": "arrowup"
+        },
+        {
+            "id": "shift",
+            "name": "shift",
+            "shift": "no",
+            "size": 2.75,
+            "code": "shiftright"
+        }
+    ],
+    [
+        {
+            "id": "ctrl",
+            "name": "ctrl",
+            "shift": "no",
+            "size": 1.5,
+            "code": "controlleft"
+        },
+        {
+            "id": "win",
+            "name": "win",
+            "shift": "no",
+            "size": 1.5,
+            "code":"metaleft"
+        },
+        {
+            "id": "alt",
+            "name": "alt",
+            "shift": "no",
+            "size": 1.5,
+            "code":"altleft"
+        },
+        {
+            "id": "space",
+            "name": "space",
+            "shift": "no",
+            "size": 7,
+            "code":"space"
+        },
+        {
+            "id": "alt",
+            "name": "alt",
+            "shift": "no",
+            "size": 1.5,
+            "code": "altright"
+        },
+
+        {
+            "id": "&larr;",
+            "name": "&larr;",
+            "shift": "no",
+            "size": 1,
+            "code":"arrowleft"
+        },
+        {
+            "id": "&darr;",
+            "name": "&darr;",
+            "shift": "no",
+            "size": 1,
+            "code":"arrowdown"
+        },
+        {
+            "id": "&rarr;",
+            "name": "&rarr;",
+            "shift": "no",
+            "size": 1,
+            "code":"arrowright"
+        },
+        {
+            "id": "ctrl",
+            "name": "ctrl",
+            "shift": "no",
+            "size": 1.5,
+            "code":"controlright"
+        }
+    ]
+]
